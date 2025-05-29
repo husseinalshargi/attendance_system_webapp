@@ -1,0 +1,24 @@
+name: Run Attendance App
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  run-app:
+    runs-on: ubuntu-latest
+
+    env:
+      REDIS_HOST: ${{ secrets.REDIS_HOST }}
+      REDIS_PORT: ${{ secrets.REDIS_PORT }}
+      REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run configure script
+        run: bash configure.sh
+
+      - name: Run main script
+        run: bash main.sh
