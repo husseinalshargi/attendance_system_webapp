@@ -16,9 +16,9 @@ st.header('Attendence System using Face Recognition')
 
 
 #show a spinner while downloading the data:
-with st.spinner("Loading Models and Connecting to Redis db... "):
+with st.spinner("Loading Models and Connecting to database... "):
     import face_rec
 
 st.success("Model loaded successfully")
-st.success("Redis db successfully loaded")
+st.success("Data successfully loaded")
 

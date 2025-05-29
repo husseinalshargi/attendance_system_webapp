@@ -8,3 +8,9 @@ opencv-python-headless
 pandas
 numpy
 python-dotenv
+torch --index-url https://download.pytorch.org/whl/cu121
+torchvision --index-url https://download.pytorch.org/whl/cu121
+torchaudio --index-url https://download.pytorch.org/whl/cu121
+onnx 
+onnxruntime-gpu
+albumentations
